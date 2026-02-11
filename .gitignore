@@ -1,0 +1,31 @@
+# 忽略 Python 编译文件
+__pycache__/
+*.pyc
+
+# 忽略数据集图片 (太大了，GitHub 传不上去)
+*.tif
+*.jpg
+*.png
+UCM_imgs/
+NWPU_dataset/
+QXSLAB_SAROPT_4000/
+imgs/
+
+# 忽略生成的巨大的结果文件或权重
+*.pth
+*.bin
+checkpoints/
+outputs/
+ourscore/
+ourscore_*/
+
+# 忽略系统文件
+.DS_Store
+Thumbs.db
+
+# 忽略 IDE 配置
+.vscode/
+.idea/
+
+# 如果您的 JSON 文件非常大 (>100MB)，也建议忽略或使用 git-lfs
+# *.json
