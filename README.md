@@ -65,18 +65,6 @@ python train.py
 ## Licensing Information
 
 本项目所使用的图片数据来源于 **UC Merced Land Use Dataset (UCM)**和**RSGPT: A Remote Sensing Vision Language Model and Benchmark**。对于UCM数据集我们通过半人工的方式进行caption标注，相比于原origin的label更加精细完整，RSGPT则直接使用提供的标注信息。
-- 该数据集由加州大学默塞德分校（University of California, Merced）提供。
-- **使用限制**：数据集中的所有图片及其相关标注仅可用于**学术研究用途**，严禁任何形式的商业用途。
-- **引用说明**：如果您在研究中使用了本项目的相关内容，请务必引用 UCM 数据集的原始论文：
-
-```bibtex
-@inproceedings{Yang2010UCM,
-  title={Bag-Of-Visual-Words and Spatial Extensions for Land-Use Classification},
-  author={Yang, Yi and Newsam, Shawn},
-  booktitle={ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM GIS)},
-  year={2010}
-}
-```
 
 ## 致谢
 
@@ -95,5 +83,16 @@ python train.py
   pages={272--286},
   year={2025},
   publisher={Elsevier}
+}
+```
+**UC Merced Land Use Dataset (UCM)** 该数据集由加州大学默塞德分校（University of California, Merced）提供。
+- **使用限制**：数据集中的所有图片及其相关标注仅可用于**学术研究用途**，严禁任何形式的商业用途。
+- **引用说明**：如果您在研究中使用了本项目的相关内容，请务必引用 UCM 数据集的原始论文：
+```bibtex
+@inproceedings{Yang2010UCM,
+  title={Bag-Of-Visual-Words and Spatial Extensions for Land-Use Classification},
+  author={Yang, Yi and Newsam, Shawn},
+  booktitle={ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM GIS)},
+  year={2010}
 }
 ```
