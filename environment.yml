@@ -1,4 +1,4 @@
-name: imagedit
+name: remote_scorer
 channels:
   - pytorch
   - nvidia
