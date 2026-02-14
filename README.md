@@ -1,3 +1,5 @@
+这是一个持续进行的项目，我们在持续进行后续的图像翻译工作的研究。
+
 # 遥感图像-文本匹配模型
 
 本项目灵感来源于clip，siglip系列的对比学习的训练方式，同时感谢QwenVL系列伟大的开源工作，我们基于 Qwen2.5-VL-3B 小型预训练模型，采用双塔（Dual-Encoder）架构进行微调，旨在学习遥感图像与其文本描述之间的语义匹配关系,旨来在众多对同一幅image的captions中挑选质量最优秀的one，我们相信这将为遥感图像理解和检索提供更精准的解决方案，同时为我们的后续的SAR2OPT的图像翻译工作提供技术支持。
@@ -53,8 +55,45 @@ python train.py
 
 ## 5. 模型推理
 
+
+
 使用 `inference_script.py` 对新的图文对进行评分。脚本支持两种模式：
 
 ### 单张图文对评分
 ### 批量评分 (使用JSON文件)
 
+## Licensing Information
+
+本项目所使用的图片数据来源于 **UC Merced Land Use Dataset (UCM)**和**RSGPT: A Remote Sensing Vision Language Model and Benchmark**。对于UCM数据集我们通过半人工的方式进行caption标注，相比于原origin的label更加精细完整，RSGPT则直接使用提供的标注信息。
+- 该数据集由加州大学默塞德分校（University of California, Merced）提供。
+- **使用限制**：数据集中的所有图片及其相关标注仅可用于**学术研究用途**，严禁任何形式的商业用途。
+- **引用说明**：如果您在研究中使用了本项目的相关内容，请务必引用 UCM 数据集的原始论文：
+
+```bibtex
+@inproceedings{Yang2010UCM,
+  title={Bag-Of-Visual-Words and Spatial Extensions for Land-Use Classification},
+  author={Yang, Yi and Newsam, Shawn},
+  booktitle={ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (ACM GIS)},
+  year={2010}
+}
+```
+
+## 致谢
+
+本项目在开发过程中深受以下开源项目和研究工作的启发与支持，特此致谢：
+
+- **Qwen2.5-VL**: 感谢阿里云 Qwen 团队提供的卓越视觉语言模型 Qwen2.5-VL。本项目基于其强大的预训练能力构建了双塔编码器。
+  - *Reference*: Bai, Shuai, et al. "Qwen2.5-VL Technical Report." arXiv preprint arXiv:2502.13923 (2025).
+
+- **RSGPT / InstructBLIP**: 本项目的模型架构设计部分参考了 InstructBLIP 的思想，同时 RSGPT 在遥感领域的应用为我们提供了宝贵的思路。如果您之前不了解这些优秀的工作，强烈推荐您进行深入了解！
+```bibtex
+@article{hu2025rsgpt,
+  title={Rsgpt: A remote sensing vision language model and benchmark},
+  author={Hu, Yuan and Yuan, Jianlong and Wen, Congcong and Lu, Xiaonan and Liu, Yu and Li, Xiang},
+  journal={ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume={224},
+  pages={272--286},
+  year={2025},
+  publisher={Elsevier}
+}
+```
